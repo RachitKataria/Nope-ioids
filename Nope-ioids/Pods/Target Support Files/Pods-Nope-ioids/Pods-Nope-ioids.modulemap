@@ -1,0 +1,6 @@
+framework module Pods_Nope_ioids {
+  umbrella header "Pods-Nope-ioids-umbrella.h"
+
+  export *
+  module * { export * }
+}

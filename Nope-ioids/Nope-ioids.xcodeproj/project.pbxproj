@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		023F7C2C9A50BB542CE96D85 /* Pods_Nope_ioids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29886DA38A8D38027FC5C5E /* Pods_Nope_ioids.framework */; };
 		8A82FD8F20702A3E00852316 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82FD8E20702A3E00852316 /* HomeScreenViewController.swift */; };
 		8A82FD9120702A5D00852316 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82FD9020702A5D00852316 /* ProgressViewController.swift */; };
 		8A82FD9320702A7500852316 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82FD9220702A7500852316 /* HelpViewController.swift */; };
@@ -16,6 +17,8 @@
 		8A82FD9B20702ACA00852316 /* HelpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A82FD9A20702ACA00852316 /* HelpStoryboard.storyboard */; };
 		8A82FD9D20702ADC00852316 /* BreatheStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A82FD9C20702ADC00852316 /* BreatheStoryboard.storyboard */; };
 		8AD655DB207038FD009FA94D /* GifLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD655DA207038FD009FA94D /* GifLoad.swift */; };
+		ED7FA63C20704F8800B6A8F2 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7FA63B20704F8800B6A8F2 /* CalendarViewController.swift */; };
+		ED7FA63E20704F9900B6A8F2 /* CalendarStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED7FA63D20704F9900B6A8F2 /* CalendarStoryboard.storyboard */; };
 		EDB00D17207029AA0044EDB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB00D16207029AA0044EDB1 /* AppDelegate.swift */; };
 		EDB00D1E207029AA0044EDB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB00D1D207029AA0044EDB1 /* Assets.xcassets */; };
 		EDB00D21207029AA0044EDB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB00D1F207029AA0044EDB1 /* LaunchScreen.storyboard */; };
@@ -31,6 +34,11 @@
 		8A82FD9A20702ACA00852316 /* HelpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HelpStoryboard.storyboard; sourceTree = "<group>"; };
 		8A82FD9C20702ADC00852316 /* BreatheStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BreatheStoryboard.storyboard; sourceTree = "<group>"; };
 		8AD655DA207038FD009FA94D /* GifLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifLoad.swift; sourceTree = "<group>"; };
+		B29886DA38A8D38027FC5C5E /* Pods_Nope_ioids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nope_ioids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7EC8409BCD1556900FEB0B3 /* Pods-Nope-ioids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nope-ioids.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nope-ioids/Pods-Nope-ioids.release.xcconfig"; sourceTree = "<group>"; };
+		E7D599D30D081C14A035500E /* Pods-Nope-ioids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nope-ioids.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nope-ioids/Pods-Nope-ioids.debug.xcconfig"; sourceTree = "<group>"; };
+		ED7FA63B20704F8800B6A8F2 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		ED7FA63D20704F9900B6A8F2 /* CalendarStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarStoryboard.storyboard; sourceTree = "<group>"; };
 		EDB00D13207029AA0044EDB1 /* Nope-ioids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nope-ioids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB00D16207029AA0044EDB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDB00D1D207029AA0044EDB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,12 +51,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				023F7C2C9A50BB542CE96D85 /* Pods_Nope_ioids.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54A00D4F54BD46202BF9BC2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B29886DA38A8D38027FC5C5E /* Pods_Nope_ioids.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8A82FD9E20702AE600852316 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +74,7 @@
 				8A82FD9820702ABA00852316 /* ProgressStoryboard.storyboard */,
 				8A82FD9A20702ACA00852316 /* HelpStoryboard.storyboard */,
 				8A82FD9C20702ADC00852316 /* BreatheStoryboard.storyboard */,
+				ED7FA63D20704F9900B6A8F2 /* CalendarStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -69,8 +87,18 @@
 				8A82FD9220702A7500852316 /* HelpViewController.swift */,
 				8A82FD9420702A8400852316 /* BreatheViewController.swift */,
 				8AD655DA207038FD009FA94D /* GifLoad.swift */,
+				ED7FA63B20704F8800B6A8F2 /* CalendarViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		902D3415DA79B393E5FBE126 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7D599D30D081C14A035500E /* Pods-Nope-ioids.debug.xcconfig */,
+				C7EC8409BCD1556900FEB0B3 /* Pods-Nope-ioids.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		EDB00D0A207029AA0044EDB1 = {
@@ -78,6 +106,8 @@
 			children = (
 				EDB00D15207029AA0044EDB1 /* Nope-ioids */,
 				EDB00D14207029AA0044EDB1 /* Products */,
+				902D3415DA79B393E5FBE126 /* Pods */,
+				54A00D4F54BD46202BF9BC2C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,9 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDB00D25207029AA0044EDB1 /* Build configuration list for PBXNativeTarget "Nope-ioids" */;
 			buildPhases = (
+				A1A1AFCA530EC0DD5695260C /* [CP] Check Pods Manifest.lock */,
 				EDB00D0F207029AA0044EDB1 /* Sources */,
 				EDB00D10207029AA0044EDB1 /* Frameworks */,
 				EDB00D11207029AA0044EDB1 /* Resources */,
+				1ADB28DB6B622E4335B00725 /* [CP] Embed Pods Frameworks */,
+				FD7F8CE1EC6548BD0473D784 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -166,10 +199,65 @@
 				EDB00D1E207029AA0044EDB1 /* Assets.xcassets in Resources */,
 				8A82FD9920702ABA00852316 /* ProgressStoryboard.storyboard in Resources */,
 				8A82FD9D20702ADC00852316 /* BreatheStoryboard.storyboard in Resources */,
+				ED7FA63E20704F9900B6A8F2 /* CalendarStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1ADB28DB6B622E4335B00725 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Nope-ioids/Pods-Nope-ioids-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nope-ioids/Pods-Nope-ioids-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1A1AFCA530EC0DD5695260C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nope-ioids-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD7F8CE1EC6548BD0473D784 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nope-ioids/Pods-Nope-ioids-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EDB00D0F207029AA0044EDB1 /* Sources */ = {
@@ -181,6 +269,7 @@
 				8A82FD9120702A5D00852316 /* ProgressViewController.swift in Sources */,
 				EDB00D17207029AA0044EDB1 /* AppDelegate.swift in Sources */,
 				8A82FD8F20702A3E00852316 /* HomeScreenViewController.swift in Sources */,
+				ED7FA63C20704F8800B6A8F2 /* CalendarViewController.swift in Sources */,
 				8A82FD9320702A7500852316 /* HelpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +397,7 @@
 		};
 		EDB00D26207029AA0044EDB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7D599D30D081C14A035500E /* Pods-Nope-ioids.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -323,6 +413,7 @@
 		};
 		EDB00D27207029AA0044EDB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7EC8409BCD1556900FEB0B3 /* Pods-Nope-ioids.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
