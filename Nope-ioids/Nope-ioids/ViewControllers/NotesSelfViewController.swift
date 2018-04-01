@@ -15,9 +15,11 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
     var selectedAudio = ""
     let defaults = UserDefaults.standard
     var data : [String] = []
+    
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var NotesList: UITableView!
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var textView: UITextView!
     
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
@@ -37,6 +39,7 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
         NotesList.dataSource = self
         NotesList.delegate = self
         playButton.isHidden = true
+        textView.isUserInteractionEnabled = false
 
         recordingSession = AVAudioSession.sharedInstance()
         do {
@@ -128,7 +131,7 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
             recordButton.setTitle("Tap to Re-record", for: .normal)
             
             // Process audio
-            processAudio(path: data.last!)
+            processAudio(path: data.last!,index: data.count - 1)
             
         } else {
             recordButton.setTitle("Tap to Record", for: .normal)
@@ -175,7 +178,7 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    func processAudio(path: String) {
+    func processAudio(path: String, index: Int) {
         let API_KEY = "AIzaSyDTy4DX3fM9srvwFIccU2BXEAwxh2-LWrs"
         var service = "https://speech.googleapis.com/v1/speech:recognize"
         service = service + "?key=" + API_KEY
@@ -214,8 +217,14 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let task = URLSession.shared.dataTask(with: mutableRequest as URLRequest) { (data, response, error) in
             DispatchQueue.main.async {
-                let stringResult = String.init(data: data!, encoding: String.Encoding.utf8)
-                print(stringResult!)
+                do {
+                    let resultDict = try JSONSerialization.jsonObject(with: data!, options:[]) as! [String: Any]
+                    let finalString = ((((resultDict["results"] as! [Any?])[0] as! [String:Any?])["alternatives"] as! [Any?])[0] as! [String: Any?])["transcript"] as! String
+                    self.textView.text = finalString
+                } catch {
+                    print(error.localizedDescription)
+                }
+                
             }
         }
         
