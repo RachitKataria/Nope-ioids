@@ -23,6 +23,11 @@ class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioR
     var audioRecorder: AVAudioRecorder!
     var audioPlayer: AVAudioPlayer?
 
+    @IBAction func backButtonPressed(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "ProgressStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ProgressViewController") as! ProgressViewController
+        self.show(vc, sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

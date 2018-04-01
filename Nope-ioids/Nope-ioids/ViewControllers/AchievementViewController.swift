@@ -16,6 +16,11 @@ class AchievementViewController: UIViewController {
         achievementsLabel.font = UIFont.systemFont(ofSize: 32, weight: UIFont.Weight.ultraLight)
     }
 
+    @IBAction func backButtonPressed(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "ProgressStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ProgressViewController") as! ProgressViewController
+        self.show(vc, sender: self)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

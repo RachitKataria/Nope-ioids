@@ -23,6 +23,11 @@ class BreatheViewController: UIViewController {
         }
     }
     
+    @IBAction func cancelButton(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "HomeScreenStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as! HomeScreenViewController
+        self.show(vc, sender: self)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
