@@ -26,18 +26,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naT-Fc-aSg">
-                                <rect key="frame" x="74" y="159" width="62" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naT-Fc-aSg">
+                                <rect key="frame" x="51" y="120" width="110" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Calendar"/>
+                                <state key="normal" image="Calendar"/>
                                 <connections>
                                     <action selector="didPressCalendar:" destination="fjD-Wh-yQo" eventType="touchUpInside" id="ty8-ep-V4n"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2US-Ie-ycE">
-                                <rect key="frame" x="221" y="159" width="97" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2US-Ie-ycE">
+                                <rect key="frame" x="224" y="111" width="92" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Achievements"/>
+                                <state key="normal" image="Achievement"/>
+                                <connections>
+                                    <action selector="achievementsPressed:" destination="fjD-Wh-yQo" eventType="touchUpInside" id="BTH-SE-3ox"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZU-J2-aRm">
                                 <rect key="frame" x="58" y="477" width="94" height="30"/>
@@ -47,16 +50,16 @@
                                     <action selector="didPressTimeCapsule:" destination="fjD-Wh-yQo" eventType="touchUpInside" id="Lat-cT-Ne4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woC-dM-A17">
-                                <rect key="frame" x="249" y="477" width="41" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woC-dM-A17">
+                                <rect key="frame" x="224" y="433" width="92" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Notes"/>
+                                <state key="normal" image="Notes"/>
                                 <connections>
                                     <action selector="didPressNotes:" destination="fjD-Wh-yQo" eventType="touchUpInside" id="dor-Vj-R7A"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.63606203219987367" green="0.91183671034777913" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bv2-4m-yKJ"/>
                     </view>
                 </viewController>
@@ -65,4 +68,9 @@
             <point key="canvasLocation" x="41" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Achievement" width="92" height="126"/>
+        <image name="Calendar" width="110" height="108"/>
+        <image name="Notes" width="92" height="118"/>
+    </resources>
 </document>

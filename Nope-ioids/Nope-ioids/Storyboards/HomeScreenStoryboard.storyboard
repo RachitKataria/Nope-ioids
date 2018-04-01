@@ -10,27 +10,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Screen View Controller-->
+        <!--HomeScreenViewController-->
         <scene sceneID="9pe-l7-Y0s">
             <objects>
-                <viewController storyboardIdentifier="HomescreenStoryboard" id="Nio-md-4GF" customClass="HomeScreenViewController" customModule="Nope_ioids" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeScreenViewController" title="HomeScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nio-md-4GF" customClass="HomeScreenViewController" customModule="Nope_ioids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zXR-EF-4ja">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="strongerCircle" translatesAutoresizingMaskIntoConstraints="NO" id="x4R-js-rWC">
-                                <rect key="frame" x="33" y="154" width="316" height="312"/>
+                                <rect key="frame" x="29" y="185" width="316" height="312"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUH-Id-cTK">
-                                <rect key="frame" x="58" y="262" width="267" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.61568627450000002" green="0.80784313730000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Help me stay strong"/>
-                                <connections>
-                                    <action selector="HelpButtonPressed:" destination="Nio-md-4GF" eventType="touchUpInside" id="xec-kW-m5R"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1p-fV-s9A">
                                 <rect key="frame" x="33" y="606" width="309" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -40,22 +31,37 @@
                                     <action selector="SeeProgressButtonPressed:" destination="Nio-md-4GF" eventType="touchUpInside" id="Ez4-dC-Wz5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saturday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwH-oc-EAE">
-                                <rect key="frame" x="102" y="20" width="83" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Help me be" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45r-Sy-2fw">
+                                <rect key="frame" x="83" y="287" width="209" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC0-80-dQH">
-                                <rect key="frame" x="224" y="19" width="83" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="stronger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEw-wv-Mvw">
+                                <rect key="frame" x="88" y="312" width="199" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUH-Id-cTK">
+                                <rect key="frame" x="39" y="205" width="299" height="272"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.80784313730000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="HelpButtonPressed:" destination="Nio-md-4GF" eventType="touchUpInside" id="xec-kW-m5R"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="April 1st, 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efs-dF-XBQ">
+                                <rect key="frame" x="61" y="91" width="254" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="March 31, 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efs-dF-XBQ">
-                                <rect key="frame" x="88" y="49" width="199" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SUNDAY  •  DAY 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwH-oc-EAE">
+                                <rect key="frame" x="119" y="90" width="139" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -67,10 +73,12 @@
                     </view>
                     <connections>
                         <outlet property="DateLabel" destination="efs-dF-XBQ" id="16V-GC-Vwg"/>
-                        <outlet property="DayLabel" destination="CC0-80-dQH" id="raB-cc-vxE"/>
+                        <outlet property="HelpMeBeLabel" destination="45r-Sy-2fw" id="zUa-ls-Xrh"/>
                         <outlet property="HelpStayStrongButton" destination="rUH-Id-cTK" id="dGN-Lh-9Jg"/>
                         <outlet property="StrongerCircle" destination="x4R-js-rWC" id="f40-Ox-Efc"/>
+                        <outlet property="StrongerLabel" destination="KEw-wv-Mvw" id="wXA-HV-ZNg"/>
                         <outlet property="WeekdayLabel" destination="cwH-oc-EAE" id="QTA-f7-kl3"/>
+                        <outlet property="trackProgressButton" destination="U1p-fV-s9A" id="WHb-qc-40M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5r-WD-Wwa" userLabel="First Responder" sceneMemberID="firstResponder"/>
