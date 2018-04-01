@@ -19,6 +19,11 @@ class ProgressViewController: UIViewController {
         self.show(vc, sender: self)
     }
     
+    @IBAction func achievementsPressed(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "AchievementStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AchievementViewController") as! AchievementViewController
+        self.show(vc, sender: self)
+    }
     
     @IBAction func didPressTimeCapsule(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "TimeCapsuleStoryboard", bundle: nil)
@@ -26,15 +31,6 @@ class ProgressViewController: UIViewController {
         self.show(vc, sender: self)
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     @IBAction func didPressNotes(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "NotesToSelfStoryboard", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "NotesSelfViewController") as! NotesSelfViewController
