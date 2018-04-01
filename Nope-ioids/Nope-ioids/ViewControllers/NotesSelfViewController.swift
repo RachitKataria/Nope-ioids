@@ -89,11 +89,11 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func startRecording() {
-        let audioFilename = getDocumentsDirectory().appendingPathComponent("Audio"+String(numberOfAudio)+".m4a")
+        let audioFilename = getDocumentsDirectory().appendingPathComponent("Audio"+String(numberOfAudio)+".ulaw")
         
         let settings = [
-            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-            AVSampleRateKey: 12000,
+            AVFormatIDKey: Int(kAudioFormatULaw),
+            AVSampleRateKey: 8000,
             AVNumberOfChannelsKey: 1,
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
         ]
@@ -120,7 +120,7 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
         audioRecorder = nil
         
         if success {
-            data.append("Audio"+String(numberOfAudio)+".m4a")
+            data.append("Audio"+String(numberOfAudio)+".ulaw")
             defaults.set(data, forKey: "AudioArray")
             numberOfAudio = numberOfAudio + 1
             defaults.set(numberOfAudio, forKey: "audioNumber")
@@ -151,9 +151,9 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
     func playAudio()
     {
         _ = [
-            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-            AVSampleRateKey: 12000.0,
-            AVNumberOfChannelsKey: 1 as NSNumber,
+            AVFormatIDKey: Int(kAudioFormatULaw),
+            AVSampleRateKey: 8000,
+            AVNumberOfChannelsKey: 2 as NSNumber,
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
             ] as [String : Any]
         
@@ -190,7 +190,7 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
             print(error.localizedDescription)
         }
         
-        let configRequest = ["encoding" : "LINEAR16", "sampleRateHertz": 12000, "languageCode": "en-US", "maxAlternatives" : 5] as [String : Any]
+        let configRequest = ["encoding" : "MULAW", "sampleRateHertz": 8000, "languageCode": "en-US", "maxAlternatives" : 5] as [String : Any]
         
         let audioRequest = ["content" : audioData!.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))]
         let requestDictionary = ["config": configRequest, "audio" : audioRequest]
@@ -207,8 +207,6 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
         let url = URL.init(string: service)!
         let mutableRequest = NSMutableURLRequest.init(url: url)
         
-        // if your API key has a bundle ID restriction, specify the bundle ID like this:
-        
         let contentType = "application/json"
         mutableRequest.addValue(contentType, forHTTPHeaderField: "Content-Type")
         mutableRequest.httpBody = requestData
@@ -222,5 +220,7 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
         task.resume()
+        
+        while !(task.state == URLSessionTask.State.completed) {}
     }
 }
