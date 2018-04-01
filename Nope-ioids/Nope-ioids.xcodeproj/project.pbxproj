@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		023F7C2C9A50BB542CE96D85 /* Pods_Nope_ioids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29886DA38A8D38027FC5C5E /* Pods_Nope_ioids.framework */; };
-		8A7451B22070553000E51529 /* breathe.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8A7451B12070553000E51529 /* breathe.gif */; };
 		8A7451B420705C0D00E51529 /* NotesToSelfStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7451B320705C0D00E51529 /* NotesToSelfStoryboard.storyboard */; };
 		8A7451B620705C4600E51529 /* NotesSelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7451B520705C4600E51529 /* NotesSelfViewController.swift */; };
 		8A7451B820705DDB00E51529 /* NotesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7451B720705DDB00E51529 /* NotesListTableViewCell.swift */; };
+		8A7451BC2070647C00E51529 /* breathe.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8A7451BB2070647C00E51529 /* breathe.gif */; };
 		8A82FD8F20702A3E00852316 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82FD8E20702A3E00852316 /* HomeScreenViewController.swift */; };
 		8A82FD9120702A5D00852316 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82FD9020702A5D00852316 /* ProgressViewController.swift */; };
 		8A82FD9320702A7500852316 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82FD9220702A7500852316 /* HelpViewController.swift */; };
@@ -29,10 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8A7451B12070553000E51529 /* breathe.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = breathe.gif; sourceTree = "<group>"; };
 		8A7451B320705C0D00E51529 /* NotesToSelfStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotesToSelfStoryboard.storyboard; sourceTree = "<group>"; };
 		8A7451B520705C4600E51529 /* NotesSelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesSelfViewController.swift; sourceTree = "<group>"; };
 		8A7451B720705DDB00E51529 /* NotesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListTableViewCell.swift; sourceTree = "<group>"; };
+		8A7451BB2070647C00E51529 /* breathe.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = breathe.gif; sourceTree = "<group>"; };
 		8A82FD8E20702A3E00852316 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		8A82FD9020702A5D00852316 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		8A82FD9220702A7500852316 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 				8A82FD8E20702A3E00852316 /* HomeScreenViewController.swift */,
 				8A82FD9020702A5D00852316 /* ProgressViewController.swift */,
 				8A82FD9220702A7500852316 /* HelpViewController.swift */,
-				8A7451B12070553000E51529 /* breathe.gif */,
+				8A7451BB2070647C00E51529 /* breathe.gif */,
 				8A82FD9420702A8400852316 /* BreatheViewController.swift */,
 				8AD655DA207038FD009FA94D /* GifLoad.swift */,
 				ED7FA63B20704F8800B6A8F2 /* CalendarViewController.swift */,
@@ -206,10 +206,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A82FD9B20702ACA00852316 /* HelpStoryboard.storyboard in Resources */,
+				8A7451BC2070647C00E51529 /* breathe.gif in Resources */,
 				8A82FD9720702AA700852316 /* HomeScreenStoryboard.storyboard in Resources */,
 				EDB00D21207029AA0044EDB1 /* LaunchScreen.storyboard in Resources */,
 				EDB00D1E207029AA0044EDB1 /* Assets.xcassets in Resources */,
-				8A7451B22070553000E51529 /* breathe.gif in Resources */,
 				8A7451B420705C0D00E51529 /* NotesToSelfStoryboard.storyboard in Resources */,
 				8A82FD9920702ABA00852316 /* ProgressStoryboard.storyboard in Resources */,
 				8A82FD9D20702ADC00852316 /* BreatheStoryboard.storyboard in Resources */,
