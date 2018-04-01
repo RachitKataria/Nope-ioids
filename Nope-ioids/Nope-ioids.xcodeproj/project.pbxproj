@@ -12,6 +12,8 @@
 		8A7451B620705C4600E51529 /* NotesSelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7451B520705C4600E51529 /* NotesSelfViewController.swift */; };
 		8A7451B820705DDB00E51529 /* NotesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7451B720705DDB00E51529 /* NotesListTableViewCell.swift */; };
 		8A7451BC2070647C00E51529 /* breathe.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8A7451BB2070647C00E51529 /* breathe.gif */; };
+		8A7451BE2070AA3700E51529 /* AchievementStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7451BD2070AA3700E51529 /* AchievementStoryboard.storyboard */; };
+		8A7451C02070AA5400E51529 /* AchievementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7451BF2070AA5400E51529 /* AchievementViewController.swift */; };
 		8A82FD8F20702A3E00852316 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82FD8E20702A3E00852316 /* HomeScreenViewController.swift */; };
 		8A82FD9120702A5D00852316 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82FD9020702A5D00852316 /* ProgressViewController.swift */; };
 		8A82FD9320702A7500852316 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A82FD9220702A7500852316 /* HelpViewController.swift */; };
@@ -39,6 +41,8 @@
 		8A7451B520705C4600E51529 /* NotesSelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesSelfViewController.swift; sourceTree = "<group>"; };
 		8A7451B720705DDB00E51529 /* NotesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListTableViewCell.swift; sourceTree = "<group>"; };
 		8A7451BB2070647C00E51529 /* breathe.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = breathe.gif; sourceTree = "<group>"; };
+		8A7451BD2070AA3700E51529 /* AchievementStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AchievementStoryboard.storyboard; sourceTree = "<group>"; };
+		8A7451BF2070AA5400E51529 /* AchievementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementViewController.swift; sourceTree = "<group>"; };
 		8A82FD8E20702A3E00852316 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		8A82FD9020702A5D00852316 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		8A82FD9220702A7500852316 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 				ED7FA63D20704F9900B6A8F2 /* CalendarStoryboard.storyboard */,
 				8A7451B320705C0D00E51529 /* NotesToSelfStoryboard.storyboard */,
 				ED4071AA2070609D001520BD /* TimeCapsuleStoryboard.storyboard */,
+				8A7451BD2070AA3700E51529 /* AchievementStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 				ED4071AE20706648001520BD /* TimeCapsuleEntry.swift */,
 				ED4071B020706C21001520BD /* TimeCapsuleEntriesViewController.swift */,
 				ED4071B220707447001520BD /* TimeCapsuleEntryViewController.swift */,
+				8A7451BF2070AA5400E51529 /* AchievementViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 				ED4071AB2070609D001520BD /* TimeCapsuleStoryboard.storyboard in Resources */,
 				8A82FD9920702ABA00852316 /* ProgressStoryboard.storyboard in Resources */,
 				8A82FD9D20702ADC00852316 /* BreatheStoryboard.storyboard in Resources */,
+				8A7451BE2070AA3700E51529 /* AchievementStoryboard.storyboard in Resources */,
 				ED7FA63E20704F9900B6A8F2 /* CalendarStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +318,7 @@
 				8A7451B820705DDB00E51529 /* NotesListTableViewCell.swift in Sources */,
 				ED7FA63C20704F8800B6A8F2 /* CalendarViewController.swift in Sources */,
 				8A82FD9320702A7500852316 /* HelpViewController.swift in Sources */,
+				8A7451C02070AA5400E51529 /* AchievementViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -38,6 +38,9 @@
                                 <rect key="frame" x="224" y="111" width="92" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Achievement"/>
+                                <connections>
+                                    <action selector="achievementsPressed:" destination="fjD-Wh-yQo" eventType="touchUpInside" id="BTH-SE-3ox"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZU-J2-aRm">
                                 <rect key="frame" x="58" y="477" width="94" height="30"/>
