@@ -24,6 +24,7 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
     var audioPlayer: AVAudioPlayer?
 
     @IBAction func backButtonPressed(_ sender: Any) {
+        audioPlayer?.stop()
         let storyboard: UIStoryboard = UIStoryboard(name: "ProgressStoryboard", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ProgressViewController") as! ProgressViewController
         self.show(vc, sender: self)
@@ -158,6 +159,11 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
             let audioURL = NSURL(fileURLWithPath: pathString)
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: audioURL as URL)
+                audioPlayer?.volume = 1
+                do {
+                    try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
+                } catch _ {
+                }
                 audioPlayer?.play()
             } catch {
                 print("yikes")
