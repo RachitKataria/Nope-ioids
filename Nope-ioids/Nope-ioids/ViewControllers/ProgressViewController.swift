@@ -13,7 +13,11 @@ class ProgressViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    @IBAction func didPressCalendar(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "CalendarStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
+        self.show(vc, sender: self)
+    }
     /*
      // MARK: - Navigation
      

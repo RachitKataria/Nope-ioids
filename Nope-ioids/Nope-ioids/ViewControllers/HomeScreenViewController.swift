@@ -24,8 +24,8 @@ class HomeScreenViewController: UIViewController {
     }
     
     @IBAction func SeeProgressButtonPressed(_ sender: Any) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "CalendarStoryboard", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
+        let storyboard: UIStoryboard = UIStoryboard(name: "ProgressStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ProgressViewController") as! ProgressViewController
         self.show(vc, sender: self)
     }
 }
