@@ -23,7 +23,9 @@ class BreatheViewController: UIViewController {
     }
     
     @IBAction func onNextButtonPress(_ sender: Any) {
-        print("hello world")
+        let storyboard: UIStoryboard = UIStoryboard(name: "HelpStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
+        self.show(vc, sender: self)
     }
 }
 
