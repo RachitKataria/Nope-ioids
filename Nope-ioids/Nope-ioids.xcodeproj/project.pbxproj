@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		023F7C2C9A50BB542CE96D85 /* Pods_Nope_ioids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29886DA38A8D38027FC5C5E /* Pods_Nope_ioids.framework */; };
+		8A6C28C02070CC7100E54ED5 /* CommunityStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6C28BF2070CC7100E54ED5 /* CommunityStoryboard.storyboard */; };
+		8A6C28C22070CC8200E54ED5 /* PersonalInspirationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6C28C12070CC8100E54ED5 /* PersonalInspirationStoryboard.storyboard */; };
+		8A6C28C42070CC9E00E54ED5 /* PersonalInspirationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C28C32070CC9E00E54ED5 /* PersonalInspirationViewController.swift */; };
+		8A6C28C62070CCAE00E54ED5 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C28C52070CCAE00E54ED5 /* CommunityViewController.swift */; };
 		8A7451B420705C0D00E51529 /* NotesToSelfStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7451B320705C0D00E51529 /* NotesToSelfStoryboard.storyboard */; };
 		8A7451B620705C4600E51529 /* NotesSelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7451B520705C4600E51529 /* NotesSelfViewController.swift */; };
 		8A7451B820705DDB00E51529 /* NotesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7451B720705DDB00E51529 /* NotesListTableViewCell.swift */; };
@@ -37,6 +41,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A6C28BF2070CC7100E54ED5 /* CommunityStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommunityStoryboard.storyboard; sourceTree = "<group>"; };
+		8A6C28C12070CC8100E54ED5 /* PersonalInspirationStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonalInspirationStoryboard.storyboard; sourceTree = "<group>"; };
+		8A6C28C32070CC9E00E54ED5 /* PersonalInspirationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInspirationViewController.swift; sourceTree = "<group>"; };
+		8A6C28C52070CCAE00E54ED5 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		8A7451B320705C0D00E51529 /* NotesToSelfStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotesToSelfStoryboard.storyboard; sourceTree = "<group>"; };
 		8A7451B520705C4600E51529 /* NotesSelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesSelfViewController.swift; sourceTree = "<group>"; };
 		8A7451B720705DDB00E51529 /* NotesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,6 +110,8 @@
 				8A7451B320705C0D00E51529 /* NotesToSelfStoryboard.storyboard */,
 				ED4071AA2070609D001520BD /* TimeCapsuleStoryboard.storyboard */,
 				8A7451BD2070AA3700E51529 /* AchievementStoryboard.storyboard */,
+				8A6C28BF2070CC7100E54ED5 /* CommunityStoryboard.storyboard */,
+				8A6C28C12070CC8100E54ED5 /* PersonalInspirationStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -124,6 +134,8 @@
 				ED4071B020706C21001520BD /* TimeCapsuleEntriesViewController.swift */,
 				ED4071B220707447001520BD /* TimeCapsuleEntryViewController.swift */,
 				8A7451BF2070AA5400E51529 /* AchievementViewController.swift */,
+				8A6C28C32070CC9E00E54ED5 /* PersonalInspirationViewController.swift */,
+				8A6C28C52070CCAE00E54ED5 /* CommunityViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -236,6 +248,8 @@
 				EDB00D1E207029AA0044EDB1 /* Assets.xcassets in Resources */,
 				8A7451B420705C0D00E51529 /* NotesToSelfStoryboard.storyboard in Resources */,
 				ED4071AB2070609D001520BD /* TimeCapsuleStoryboard.storyboard in Resources */,
+				8A6C28C22070CC8200E54ED5 /* PersonalInspirationStoryboard.storyboard in Resources */,
+				8A6C28C02070CC7100E54ED5 /* CommunityStoryboard.storyboard in Resources */,
 				8A82FD9920702ABA00852316 /* ProgressStoryboard.storyboard in Resources */,
 				8A82FD9D20702ADC00852316 /* BreatheStoryboard.storyboard in Resources */,
 				8A7451BE2070AA3700E51529 /* AchievementStoryboard.storyboard in Resources */,
@@ -311,12 +325,14 @@
 				8AD655DB207038FD009FA94D /* GifLoad.swift in Sources */,
 				ED4071AD207065E2001520BD /* TimeCapsuleEntriesModel.swift in Sources */,
 				8A82FD9520702A8400852316 /* BreatheViewController.swift in Sources */,
+				8A6C28C42070CC9E00E54ED5 /* PersonalInspirationViewController.swift in Sources */,
 				ED4071AF20706648001520BD /* TimeCapsuleEntry.swift in Sources */,
 				8A7451B620705C4600E51529 /* NotesSelfViewController.swift in Sources */,
 				8A82FD9120702A5D00852316 /* ProgressViewController.swift in Sources */,
 				EDB00D17207029AA0044EDB1 /* AppDelegate.swift in Sources */,
 				ED4071A920706061001520BD /* TimeCapsuleViewController.swift in Sources */,
 				8A82FD8F20702A3E00852316 /* HomeScreenViewController.swift in Sources */,
+				8A6C28C62070CCAE00E54ED5 /* CommunityViewController.swift in Sources */,
 				8A7451B820705DDB00E51529 /* NotesListTableViewCell.swift in Sources */,
 				ED7FA63C20704F8800B6A8F2 /* CalendarViewController.swift in Sources */,
 				8A82FD9320702A7500852316 /* HelpViewController.swift in Sources */,
