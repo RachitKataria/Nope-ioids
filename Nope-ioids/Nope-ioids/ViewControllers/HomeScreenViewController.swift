@@ -18,9 +18,14 @@ class HomeScreenViewController: UIViewController {
     }
     
     @IBAction func HelpButtonPressed(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "BreatheStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "BreatheViewController") as! BreatheViewController
+        self.show(vc, sender: self)
     }
     
     @IBAction func SeeProgressButtonPressed(_ sender: Any) {
-        
+        let storyboard: UIStoryboard = UIStoryboard(name: "CalendarStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
+        self.show(vc, sender: self)
     }
 }
