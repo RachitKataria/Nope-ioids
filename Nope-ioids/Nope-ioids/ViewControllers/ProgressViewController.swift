@@ -19,6 +19,11 @@ class ProgressViewController: UIViewController {
         self.show(vc, sender: self)
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "HomeScreenStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as! HomeScreenViewController
+        self.show(vc, sender: self)
+    }
     @IBAction func achievementsPressed(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "AchievementStoryboard", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "AchievementViewController") as! AchievementViewController

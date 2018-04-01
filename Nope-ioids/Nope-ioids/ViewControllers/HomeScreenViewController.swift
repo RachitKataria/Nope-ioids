@@ -21,6 +21,9 @@ class HomeScreenViewController: UIViewController {
         trackProgressButton.titleLabel?.font = UIFont(name: ".SFUIText-Medium", size: 18)!
         HelpMeBeLabel.font = UIFont.systemFont(ofSize: 36, weight: UIFont.Weight.ultraLight)
         StrongerLabel.font = UIFont.systemFont(ofSize: 48, weight: UIFont.Weight.bold)
+        trackProgressButton.backgroundColor = UIColor.clear
+        trackProgressButton.titleLabel?.textColor = UIColor.blue
+        trackProgressButton.titleLabel?.font = UIFont.systemFont(ofSize: 24, weight: UIFont.Weight.light)
     }
     
     override func didReceiveMemoryWarning() {
