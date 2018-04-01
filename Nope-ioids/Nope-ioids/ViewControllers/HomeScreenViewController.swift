@@ -5,19 +5,24 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var trackProgressButton: UIButton!
     @IBOutlet weak var StrongerCircle: UIImageView!
     @IBOutlet weak var DateLabel: UILabel!
+    @IBOutlet weak var HelpMeBeLabel: UILabel!
+    @IBOutlet weak var StrongerLabel: UILabel!
     @IBOutlet weak var DayLabel: UILabel!
     @IBOutlet weak var WeekdayLabel: UILabel!
     @IBOutlet weak var HelpStayStrongButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        DateLabel.font = UIFont(name: ".SFUIText-Medium", size: 12)!
-        DayLabel.font = UIFont(name: ".SFUIText-Medium", size: 12)!
-        WeekdayLabel.font = UIFont(name: ".SFUIText-Medium", size: 12)!
+        //DateLabel.font = UIFont(name: ".SFUIText-Medium", size: 20)!
+        DateLabel.font = UIFont.systemFont(ofSize: 32, weight: UIFont.Weight.ultraLight)
+        DayLabel.font = UIFont(name: ".SFUIText-Medium", size: 20)!
+        WeekdayLabel.font = UIFont(name: ".SFUIText-Medium", size: 20)!
         HelpStayStrongButton.layer.cornerRadius = 0.5 * HelpStayStrongButton.bounds.size.width
         HelpStayStrongButton.clipsToBounds = true
-        HelpStayStrongButton.titleLabel?.font = UIFont(name: ".SFUIText-Medium", size: 18)!
+        HelpStayStrongButton.backgroundColor = UIColor.clear
+        //HelpStayStrongButton.titleLabel?.font = UIFont(name: ".SFUIText-Medium", size: 18)!
         trackProgressButton.titleLabel?.font = UIFont(name: ".SFUIText-Medium", size: 18)!
-        
+        HelpMeBeLabel.font = UIFont.systemFont(ofSize: 36, weight: UIFont.Weight.ultraLight)
+        StrongerLabel.font = UIFont.systemFont(ofSize: 48, weight: UIFont.Weight.bold)
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,8 +31,10 @@ class HomeScreenViewController: UIViewController {
     }
     
     @IBAction func HelpButtonPressed(_ sender: Any) {
+        HelpMeBeLabel.isHidden = true
+        StrongerLabel.isHidden = true
         UIView.animate(withDuration: 1.5, animations: {
-            self.StrongerCircle.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            self.StrongerCircle.transform = CGAffineTransform(scaleX: 0.090, y: 0.090)
         })
         { (finished) in
             let storyboard: UIStoryboard = UIStoryboard(name: "BreatheStoryboard", bundle: nil)
