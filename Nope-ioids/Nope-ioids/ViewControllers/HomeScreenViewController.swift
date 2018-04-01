@@ -7,15 +7,13 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var HelpMeBeLabel: UILabel!
     @IBOutlet weak var StrongerLabel: UILabel!
-    @IBOutlet weak var DayLabel: UILabel!
     @IBOutlet weak var WeekdayLabel: UILabel!
     @IBOutlet weak var HelpStayStrongButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //DateLabel.font = UIFont(name: ".SFUIText-Medium", size: 20)!
         DateLabel.font = UIFont.systemFont(ofSize: 32, weight: UIFont.Weight.ultraLight)
-        DayLabel.font = UIFont(name: ".SFUIText-Medium", size: 20)!
-        WeekdayLabel.font = UIFont(name: ".SFUIText-Medium", size: 20)!
+        WeekdayLabel.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.light)
+        WeekdayLabel.textColor = UIColor.blue
         HelpStayStrongButton.layer.cornerRadius = 0.5 * HelpStayStrongButton.bounds.size.width
         HelpStayStrongButton.clipsToBounds = true
         HelpStayStrongButton.backgroundColor = UIColor.clear
