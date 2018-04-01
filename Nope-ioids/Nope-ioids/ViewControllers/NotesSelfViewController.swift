@@ -21,6 +21,8 @@ class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioR
     
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
+    var audioPlayer: AVAudioPlayer?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +51,9 @@ class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioR
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func PlayButtonTest(_ sender: Any) {
+        playAudio()
+    }
     @IBAction func recordButtonPressed(_ sender: Any) {
         if audioRecorder == nil {
             startRecording()
@@ -114,6 +119,27 @@ class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioR
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if !flag {
             finishRecording(success: false)
+        }
+    }
+    func playAudio()
+    {
+        let settings = [
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVSampleRateKey: 12000.0,
+            AVNumberOfChannelsKey: 1 as NSNumber,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+            ] as [String : Any]
+        
+        do {
+            let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+            let pathString = audioFilename.path
+            let audioURL = NSURL(fileURLWithPath: pathString)
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: audioURL as URL)
+                audioPlayer?.play()
+            } catch {
+                print("yikesy")
+            }
         }
     }
 }
