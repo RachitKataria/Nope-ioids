@@ -13,7 +13,7 @@ class AchievementViewController: UIViewController {
     @IBOutlet weak var achievementsLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        achievementsLabel.font = UIFont(name: ".SFUIText-Medium", size: 18)!
+        achievementsLabel.font = UIFont.systemFont(ofSize: 32, weight: UIFont.Weight.ultraLight)
     }
 
     override func didReceiveMemoryWarning() {
