@@ -20,6 +20,11 @@ class PersonalInspirationViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func backButtonPressed(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "HelpStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
+        self.show(vc, sender: self)
+    }
     
 
     /*
