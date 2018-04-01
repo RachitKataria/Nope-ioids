@@ -12,7 +12,7 @@ class HomeScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DateLabel.font = UIFont.systemFont(ofSize: 32, weight: UIFont.Weight.ultraLight)
-        WeekdayLabel.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.light)
+        WeekdayLabel.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.bold)
         WeekdayLabel.textColor = UIColor.blue
         HelpStayStrongButton.layer.cornerRadius = 0.5 * HelpStayStrongButton.bounds.size.width
         HelpStayStrongButton.clipsToBounds = true
@@ -24,6 +24,19 @@ class HomeScreenViewController: UIViewController {
         trackProgressButton.backgroundColor = UIColor.clear
         trackProgressButton.titleLabel?.textColor = UIColor.blue
         trackProgressButton.titleLabel?.font = UIFont.systemFont(ofSize: 24, weight: UIFont.Weight.light)
+        
+        WeekdayLabel.isOpaque = false
+        WeekdayLabel.alpha = 1.0
+        DateLabel.isOpaque = false
+        DateLabel.alpha = 1.0
+        trackProgressButton.titleLabel?.alpha = 1.0
+        trackProgressButton.titleLabel?.isOpaque = false
+        
+        
+        self.StrongerCircle.image = self.StrongerCircle.image!.withRenderingMode(.alwaysTemplate)
+        self.StrongerCircle.clipsToBounds = true
+        self.StrongerCircle.layer.cornerRadius = self.StrongerCircle.layer.bounds.width / 2.0
+        self.StrongerCircle.tintColor = UIColor(red: 24/255.0, green: 191/255.0, blue: 245/255.0, alpha: 0.6)
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,8 +47,14 @@ class HomeScreenViewController: UIViewController {
     @IBAction func HelpButtonPressed(_ sender: Any) {
         HelpMeBeLabel.isHidden = true
         StrongerLabel.isHidden = true
+        trackProgressButton.isUserInteractionEnabled = false
+        //trackProgressButton.isHidden = true
         UIView.animate(withDuration: 1.5, animations: {
+            self.StrongerCircle.tintColor = UIColor(red: 27/255.0, green: 132/255.0, blue: 230/255.0, alpha: 1.0)
             self.StrongerCircle.transform = CGAffineTransform(scaleX: 0.090, y: 0.090)
+            self.WeekdayLabel.alpha = 0.0
+            self.DateLabel.alpha = 0.0
+            self.trackProgressButton.titleLabel?.alpha = 0.0
         })
         { (finished) in
             let storyboard: UIStoryboard = UIStoryboard(name: "BreatheStoryboard", bundle: nil)
