@@ -21,6 +21,12 @@
 		8A82FD9B20702ACA00852316 /* HelpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A82FD9A20702ACA00852316 /* HelpStoryboard.storyboard */; };
 		8A82FD9D20702ADC00852316 /* BreatheStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A82FD9C20702ADC00852316 /* BreatheStoryboard.storyboard */; };
 		8AD655DB207038FD009FA94D /* GifLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD655DA207038FD009FA94D /* GifLoad.swift */; };
+		ED4071A920706061001520BD /* TimeCapsuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4071A820706061001520BD /* TimeCapsuleViewController.swift */; };
+		ED4071AB2070609D001520BD /* TimeCapsuleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4071AA2070609D001520BD /* TimeCapsuleStoryboard.storyboard */; };
+		ED4071AD207065E2001520BD /* TimeCapsuleEntriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4071AC207065E2001520BD /* TimeCapsuleEntriesModel.swift */; };
+		ED4071AF20706648001520BD /* TimeCapsuleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4071AE20706648001520BD /* TimeCapsuleEntry.swift */; };
+		ED4071B120706C21001520BD /* TimeCapsuleEntriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4071B020706C21001520BD /* TimeCapsuleEntriesViewController.swift */; };
+		ED4071B320707447001520BD /* TimeCapsuleEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4071B220707447001520BD /* TimeCapsuleEntryViewController.swift */; };
 		ED7FA63C20704F8800B6A8F2 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7FA63B20704F8800B6A8F2 /* CalendarViewController.swift */; };
 		ED7FA63E20704F9900B6A8F2 /* CalendarStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED7FA63D20704F9900B6A8F2 /* CalendarStoryboard.storyboard */; };
 		EDB00D17207029AA0044EDB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB00D16207029AA0044EDB1 /* AppDelegate.swift */; };
@@ -45,6 +51,12 @@
 		B29886DA38A8D38027FC5C5E /* Pods_Nope_ioids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nope_ioids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EC8409BCD1556900FEB0B3 /* Pods-Nope-ioids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nope-ioids.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nope-ioids/Pods-Nope-ioids.release.xcconfig"; sourceTree = "<group>"; };
 		E7D599D30D081C14A035500E /* Pods-Nope-ioids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nope-ioids.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nope-ioids/Pods-Nope-ioids.debug.xcconfig"; sourceTree = "<group>"; };
+		ED4071A820706061001520BD /* TimeCapsuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCapsuleViewController.swift; sourceTree = "<group>"; };
+		ED4071AA2070609D001520BD /* TimeCapsuleStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeCapsuleStoryboard.storyboard; sourceTree = "<group>"; };
+		ED4071AC207065E2001520BD /* TimeCapsuleEntriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCapsuleEntriesModel.swift; sourceTree = "<group>"; };
+		ED4071AE20706648001520BD /* TimeCapsuleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCapsuleEntry.swift; sourceTree = "<group>"; };
+		ED4071B020706C21001520BD /* TimeCapsuleEntriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCapsuleEntriesViewController.swift; sourceTree = "<group>"; };
+		ED4071B220707447001520BD /* TimeCapsuleEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCapsuleEntryViewController.swift; sourceTree = "<group>"; };
 		ED7FA63B20704F8800B6A8F2 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		ED7FA63D20704F9900B6A8F2 /* CalendarStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarStoryboard.storyboard; sourceTree = "<group>"; };
 		EDB00D13207029AA0044EDB1 /* Nope-ioids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nope-ioids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +96,7 @@
 				8A82FD9C20702ADC00852316 /* BreatheStoryboard.storyboard */,
 				ED7FA63D20704F9900B6A8F2 /* CalendarStoryboard.storyboard */,
 				8A7451B320705C0D00E51529 /* NotesToSelfStoryboard.storyboard */,
+				ED4071AA2070609D001520BD /* TimeCapsuleStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -93,6 +106,7 @@
 			children = (
 				8A82FD8E20702A3E00852316 /* HomeScreenViewController.swift */,
 				8A82FD9020702A5D00852316 /* ProgressViewController.swift */,
+				ED4071A820706061001520BD /* TimeCapsuleViewController.swift */,
 				8A82FD9220702A7500852316 /* HelpViewController.swift */,
 				8A7451B12070553000E51529 /* breathe.gif */,
 				8A82FD9420702A8400852316 /* BreatheViewController.swift */,
@@ -100,6 +114,10 @@
 				ED7FA63B20704F8800B6A8F2 /* CalendarViewController.swift */,
 				8A7451B520705C4600E51529 /* NotesSelfViewController.swift */,
 				8A7451B720705DDB00E51529 /* NotesListTableViewCell.swift */,
+				ED4071AC207065E2001520BD /* TimeCapsuleEntriesModel.swift */,
+				ED4071AE20706648001520BD /* TimeCapsuleEntry.swift */,
+				ED4071B020706C21001520BD /* TimeCapsuleEntriesViewController.swift */,
+				ED4071B220707447001520BD /* TimeCapsuleEntryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -211,6 +229,7 @@
 				EDB00D1E207029AA0044EDB1 /* Assets.xcassets in Resources */,
 				8A7451B22070553000E51529 /* breathe.gif in Resources */,
 				8A7451B420705C0D00E51529 /* NotesToSelfStoryboard.storyboard in Resources */,
+				ED4071AB2070609D001520BD /* TimeCapsuleStoryboard.storyboard in Resources */,
 				8A82FD9920702ABA00852316 /* ProgressStoryboard.storyboard in Resources */,
 				8A82FD9D20702ADC00852316 /* BreatheStoryboard.storyboard in Resources */,
 				ED7FA63E20704F9900B6A8F2 /* CalendarStoryboard.storyboard in Resources */,
@@ -278,11 +297,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4071B320707447001520BD /* TimeCapsuleEntryViewController.swift in Sources */,
+				ED4071B120706C21001520BD /* TimeCapsuleEntriesViewController.swift in Sources */,
 				8AD655DB207038FD009FA94D /* GifLoad.swift in Sources */,
+				ED4071AD207065E2001520BD /* TimeCapsuleEntriesModel.swift in Sources */,
 				8A82FD9520702A8400852316 /* BreatheViewController.swift in Sources */,
+				ED4071AF20706648001520BD /* TimeCapsuleEntry.swift in Sources */,
 				8A7451B620705C4600E51529 /* NotesSelfViewController.swift in Sources */,
 				8A82FD9120702A5D00852316 /* ProgressViewController.swift in Sources */,
 				EDB00D17207029AA0044EDB1 /* AppDelegate.swift in Sources */,
+				ED4071A920706061001520BD /* TimeCapsuleViewController.swift in Sources */,
 				8A82FD8F20702A3E00852316 /* HomeScreenViewController.swift in Sources */,
 				8A7451B820705DDB00E51529 /* NotesListTableViewCell.swift in Sources */,
 				ED7FA63C20704F8800B6A8F2 /* CalendarViewController.swift in Sources */,

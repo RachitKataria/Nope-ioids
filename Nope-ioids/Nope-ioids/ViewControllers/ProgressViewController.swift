@@ -18,6 +18,14 @@ class ProgressViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
         self.show(vc, sender: self)
     }
+    
+    
+    @IBAction func didPressTimeCapsule(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "TimeCapsuleStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "IntroTimeCapsuleViewController")
+        self.show(vc, sender: self)
+    }
+    
     /*
      // MARK: - Navigation
      
