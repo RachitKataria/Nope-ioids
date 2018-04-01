@@ -27,6 +27,7 @@
 		8A82FD9B20702ACA00852316 /* HelpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A82FD9A20702ACA00852316 /* HelpStoryboard.storyboard */; };
 		8A82FD9D20702ADC00852316 /* BreatheStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A82FD9C20702ADC00852316 /* BreatheStoryboard.storyboard */; };
 		8AD655DB207038FD009FA94D /* GifLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD655DA207038FD009FA94D /* GifLoad.swift */; };
+		ED04CA51207128E1000AAF61 /* TimeCapsuleInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04CA50207128E1000AAF61 /* TimeCapsuleInitialViewController.swift */; };
 		ED4071A920706061001520BD /* TimeCapsuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4071A820706061001520BD /* TimeCapsuleViewController.swift */; };
 		ED4071AB2070609D001520BD /* TimeCapsuleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4071AA2070609D001520BD /* TimeCapsuleStoryboard.storyboard */; };
 		ED4071AD207065E2001520BD /* TimeCapsuleEntriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4071AC207065E2001520BD /* TimeCapsuleEntriesModel.swift */; };
@@ -63,6 +64,7 @@
 		B29886DA38A8D38027FC5C5E /* Pods_Nope_ioids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nope_ioids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EC8409BCD1556900FEB0B3 /* Pods-Nope-ioids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nope-ioids.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nope-ioids/Pods-Nope-ioids.release.xcconfig"; sourceTree = "<group>"; };
 		E7D599D30D081C14A035500E /* Pods-Nope-ioids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nope-ioids.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nope-ioids/Pods-Nope-ioids.debug.xcconfig"; sourceTree = "<group>"; };
+		ED04CA50207128E1000AAF61 /* TimeCapsuleInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCapsuleInitialViewController.swift; sourceTree = "<group>"; };
 		ED4071A820706061001520BD /* TimeCapsuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCapsuleViewController.swift; sourceTree = "<group>"; };
 		ED4071AA2070609D001520BD /* TimeCapsuleStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeCapsuleStoryboard.storyboard; sourceTree = "<group>"; };
 		ED4071AC207065E2001520BD /* TimeCapsuleEntriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCapsuleEntriesModel.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				8A7451BF2070AA5400E51529 /* AchievementViewController.swift */,
 				8A6C28C32070CC9E00E54ED5 /* PersonalInspirationViewController.swift */,
 				8A6C28C52070CCAE00E54ED5 /* CommunityViewController.swift */,
+				ED04CA50207128E1000AAF61 /* TimeCapsuleInitialViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				ED4071AD207065E2001520BD /* TimeCapsuleEntriesModel.swift in Sources */,
 				8A82FD9520702A8400852316 /* BreatheViewController.swift in Sources */,
 				8A6C28C42070CC9E00E54ED5 /* PersonalInspirationViewController.swift in Sources */,
+				ED04CA51207128E1000AAF61 /* TimeCapsuleInitialViewController.swift in Sources */,
 				ED4071AF20706648001520BD /* TimeCapsuleEntry.swift in Sources */,
 				8A7451B620705C4600E51529 /* NotesSelfViewController.swift in Sources */,
 				8A82FD9120702A5D00852316 /* ProgressViewController.swift in Sources */,

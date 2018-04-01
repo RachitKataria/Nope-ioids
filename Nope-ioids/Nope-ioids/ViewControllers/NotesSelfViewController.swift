@@ -126,6 +126,10 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
             defaults.set(numberOfAudio, forKey: "audioNumber")
             NotesList.reloadData()
             recordButton.setTitle("Tap to Re-record", for: .normal)
+            
+            // Process audio
+            processAudio(path: data.last!)
+            
         } else {
             recordButton.setTitle("Tap to Record", for: .normal)
             print("Yikes!")
@@ -169,5 +173,54 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
                 print("yikes")
             }
         }
+    }
+    
+    func processAudio(path: String) {
+        let API_KEY = "AIzaSyDTy4DX3fM9srvwFIccU2BXEAwxh2-LWrs"
+        var service = "https://speech.googleapis.com/v1/speech:recognize"
+        service = service + "?key=" + API_KEY
+        
+        let audioFilename = getDocumentsDirectory().appendingPathComponent(path)
+        let pathString = audioFilename.path
+        var audioData : Data?
+        do {
+            try audioData = Data.init(contentsOf: URL(fileURLWithPath: pathString))
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+        
+        let configRequest = ["encoding" : "LINEAR16", "sampleRateHertz": 12000, "languageCode": "en-US", "maxAlternatives" : 5] as [String : Any]
+        
+        let audioRequest = ["content" : audioData!.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))]
+        let requestDictionary = ["config": configRequest, "audio" : audioRequest]
+
+        var requestData: Data?
+        
+        do {
+            try requestData = JSONSerialization.data(withJSONObject: requestDictionary, options: JSONSerialization.WritingOptions(rawValue: 0))
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+        
+        let url = URL.init(string: service)!
+        let mutableRequest = NSMutableURLRequest.init(url: url)
+        
+        // if your API key has a bundle ID restriction, specify the bundle ID like this:
+        
+        let contentType = "application/json"
+        mutableRequest.addValue(contentType, forHTTPHeaderField: "Content-Type")
+        mutableRequest.httpBody = requestData
+        mutableRequest.httpMethod = "POST"
+        
+        let task = URLSession.shared.dataTask(with: mutableRequest as URLRequest) { (data, response, error) in
+            DispatchQueue.main.async {
+                let stringResult = String.init(data: data!, encoding: String.Encoding.utf8)
+                print(stringResult!)
+            }
+        }
+        
+        task.resume()
     }
 }

@@ -21,6 +21,8 @@ class TimeCapsuleViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +30,19 @@ class TimeCapsuleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        if(whoInput.isFirstResponder) {
+            whoInput.resignFirstResponder()
+        } else if(whatInput.isFirstResponder) {
+            whatInput.resignFirstResponder()
+        } else if(whenInput.isFirstResponder) {
+            whenInput.resignFirstResponder()
+        } else if(whereInput.isFirstResponder) {
+            whereInput.resignFirstResponder()
+        } else if(whyInput.isFirstResponder) {
+            whyInput.resignFirstResponder()
+        }
+    }
 
     /*
     // MARK: - Navigation

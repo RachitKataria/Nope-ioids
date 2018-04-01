@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lRE-3Z-Bdu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lRE-3Z-Bdu">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -203,10 +203,10 @@
             </objects>
             <point key="canvasLocation" x="1432.8" y="-540.14778325123154"/>
         </scene>
-        <!--View Controller-->
+        <!--Time Capsule Initial View Controller-->
         <scene sceneID="Vy2-qK-uzm">
             <objects>
-                <viewController storyboardIdentifier="IntroTimeCapsuleViewController" id="lRE-3Z-Bdu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroTimeCapsuleViewController" id="lRE-3Z-Bdu" customClass="TimeCapsuleInitialViewController" customModule="Nope_ioids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tKr-S7-W45">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -233,6 +233,9 @@
                                 <rect key="frame" x="22" y="44" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="didPressBack:" destination="lRE-3Z-Bdu" eventType="touchUpInside" id="HND-MP-7sN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -416,7 +419,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="S5P-uU-0GJ"/>
-        <segue reference="4Vf-OB-Lve"/>
+        <segue reference="ZVL-RC-dWh"/>
+        <segue reference="hSu-pO-U31"/>
     </inferredMetricsTieBreakers>
 </document>
