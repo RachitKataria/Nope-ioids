@@ -80,7 +80,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         if(!isSameDate(date: date, compareTo: Date())) {
             return UIColor.clear
         } else {
-            return UIColor.init(red: 198/255.0, green: 51/255.0, blue: 42/255.0, alpha: 1)
+            return UIColor.init(red: 31/255.0, green: 119/255.0, blue: 219/255.0, alpha: 1)
         }
     }
     
