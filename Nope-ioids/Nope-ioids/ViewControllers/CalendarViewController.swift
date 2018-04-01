@@ -18,6 +18,11 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     var streakDates: [Date]!
     var chartData: [(Int, Double)]!
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "ProgressStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ProgressViewController") as! ProgressViewController
+        self.show(vc, sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         print(calendar.currentPage)
