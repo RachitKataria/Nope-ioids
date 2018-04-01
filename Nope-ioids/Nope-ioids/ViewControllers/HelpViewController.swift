@@ -17,22 +17,35 @@ class HelpViewController: UIViewController {
         let alertController = UIAlertController(title: nil, message: "Choose a friend to call", preferredStyle: .actionSheet)
         
         let friend1Action = UIAlertAction(title: "Call Mom", style: .default) { action in
-            // ...
+            let phoneNumber1 = "3528712319"
+            let number = phoneNumber1.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+            UIApplication.shared.open(URL(string: "tel://" + number)!, options: [:], completionHandler: nil)
         }
         alertController.addAction(friend1Action)
         
         let friend2Action = UIAlertAction(title: "Call Stacey", style: .default) { action in
-            // ...
+            let phoneNumber2 = "4082181005"
+            let number = phoneNumber2.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+            UIApplication.shared.open(URL(string: "tel://" + number)!, options: [:], completionHandler: nil)
         }
         alertController.addAction(friend2Action)
         
         let friend3Action = UIAlertAction(title: "Call Mentor John", style: .default) { action in
-            // ...
+            let phoneNumber3 = "4084558851"
+            let number = phoneNumber3.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+            UIApplication.shared.open(URL(string: "tel://" + number)!, options: [:], completionHandler: nil)
         }
         alertController.addAction(friend3Action)
         
+        let hotlineAction = UIAlertAction(title: "Call Hotline", style: .default) { action in
+            let phoneNumber4 = "18006624357"
+            let number = phoneNumber4.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+            UIApplication.shared.open(URL(string: "tel://" + number)!, options: [:], completionHandler: nil)
+        }
+        alertController.addAction(hotlineAction)
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action in
-            // ...
+            //Drop the view
         }
         alertController.addAction(cancelAction)
         
