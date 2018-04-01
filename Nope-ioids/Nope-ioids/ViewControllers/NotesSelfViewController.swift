@@ -9,13 +9,12 @@
 import UIKit
 import AVFoundation
 
-class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioRecorderDelegate {
+class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AVAudioRecorderDelegate {
 
-    let data = ["New York, NY", "Los Angeles, CA", "Chicago, IL", "Houston, TX",
-                "Philadelphia, PA", "Phoenix, AZ", "San Diego, CA", "San Antonio, TX",
-                "Dallas, TX", "Detroit, MI", "San Jose, CA", "Indianapolis, IN",
-                "Jacksonville, FL", "San Francisco, CA", "Columbus, OH", "Austin, TX",
-                "Memphis, TN", "Baltimore, MD", "Charlotte, ND", "Fort Worth, TX"]
+    var numberOfAudio = 0
+    var selectedAudio = ""
+    let defaults = UserDefaults.standard
+    var data : [String] = []
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var NotesList: UITableView!
     
@@ -31,7 +30,11 @@ class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioR
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        data = defaults.object(forKey:"AudioArray") as? [String] ?? [String]()
+        numberOfAudio = defaults.integer(forKey: "audioNumber")
         NotesList.dataSource = self
+        NotesList.delegate = self
+
         recordingSession = AVAudioSession.sharedInstance()
         do {
             try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
@@ -46,14 +49,13 @@ class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioR
                 }
             }
         } catch {
-            // failed to record!
+            print("Couldn't record")
         }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func PlayButtonTest(_ sender: Any) {
@@ -84,7 +86,7 @@ class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioR
     }
     
     func startRecording() {
-        let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+        let audioFilename = getDocumentsDirectory().appendingPathComponent("Audio"+String(numberOfAudio)+".m4a")
         
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -99,6 +101,7 @@ class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioR
             audioRecorder.record()
             
             recordButton.setTitle("Tap to Stop", for: .normal)
+            defaults.set(data, forKey: "AudioArray")
         } catch {
             finishRecording(success: false)
         }
@@ -114,10 +117,15 @@ class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioR
         audioRecorder = nil
         
         if success {
+            data.append("Audio"+String(numberOfAudio)+".m4a")
+            defaults.set(data, forKey: "AudioArray")
+            numberOfAudio = numberOfAudio + 1
+            defaults.set(numberOfAudio, forKey: "audioNumber")
+            NotesList.reloadData()
             recordButton.setTitle("Tap to Re-record", for: .normal)
         } else {
             recordButton.setTitle("Tap to Record", for: .normal)
-            // recording failed :(
+            print("Yikes!")
         }
     }
     
@@ -126,9 +134,15 @@ class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioR
             finishRecording(success: false)
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You selected row \(indexPath.row)")
+        selectedAudio = data[indexPath.row]
+    }
+
     func playAudio()
     {
-        let settings = [
+        _ = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 12000.0,
             AVNumberOfChannelsKey: 1 as NSNumber,
@@ -136,14 +150,14 @@ class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioR
             ] as [String : Any]
         
         do {
-            let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+            let audioFilename = getDocumentsDirectory().appendingPathComponent(selectedAudio)
             let pathString = audioFilename.path
             let audioURL = NSURL(fileURLWithPath: pathString)
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: audioURL as URL)
                 audioPlayer?.play()
             } catch {
-                print("yikesy")
+                print("yikes")
             }
         }
     }
