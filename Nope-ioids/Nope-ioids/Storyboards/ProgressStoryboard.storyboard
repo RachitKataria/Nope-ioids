@@ -43,6 +43,9 @@
                                 <rect key="frame" x="58" y="477" width="94" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Time Capsule"/>
+                                <connections>
+                                    <action selector="didPressTimeCapsule:" destination="fjD-Wh-yQo" eventType="touchUpInside" id="Lat-cT-Ne4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woC-dM-A17">
                                 <rect key="frame" x="224" y="433" width="92" height="118"/>
