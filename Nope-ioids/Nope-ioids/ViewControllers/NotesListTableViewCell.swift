@@ -10,6 +10,8 @@ import UIKit
 
 class NotesListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var timestampLabel: UILabel!
+    @IBOutlet weak var audioLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

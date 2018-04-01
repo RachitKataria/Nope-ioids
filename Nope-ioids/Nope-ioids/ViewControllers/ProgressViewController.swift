@@ -35,6 +35,11 @@ class ProgressViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    @IBAction func didPressNotes(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "NotesToSelfStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "NotesSelfViewController") as! NotesSelfViewController
+        self.show(vc, sender: self)
+    }
     
 }
 
