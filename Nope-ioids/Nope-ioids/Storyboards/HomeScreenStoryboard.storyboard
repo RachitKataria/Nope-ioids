@@ -71,6 +71,7 @@
                         <outlet property="HelpStayStrongButton" destination="rUH-Id-cTK" id="dGN-Lh-9Jg"/>
                         <outlet property="StrongerCircle" destination="x4R-js-rWC" id="f40-Ox-Efc"/>
                         <outlet property="WeekdayLabel" destination="cwH-oc-EAE" id="QTA-f7-kl3"/>
+                        <outlet property="trackProgressButton" destination="U1p-fV-s9A" id="WHb-qc-40M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5r-WD-Wwa" userLabel="First Responder" sceneMemberID="firstResponder"/>
