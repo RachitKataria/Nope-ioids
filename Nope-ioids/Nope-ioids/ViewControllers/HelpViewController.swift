@@ -2,6 +2,7 @@ import UIKit
 
 class HelpViewController: UIViewController {
     
+    @IBOutlet weak var backButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -11,6 +12,11 @@ class HelpViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func backButtonPressed(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! ProgressViewController
+        self.show(vc, sender: self)
     }
     
     @IBAction func callFriendPressed(_ sender: Any) {
@@ -37,8 +43,8 @@ class HelpViewController: UIViewController {
         }
         alertController.addAction(friend3Action)
         
-        let hotlineAction = UIAlertAction(title: "Call Hotline", style: .default) { action in
-            let phoneNumber4 = "18006624357"
+        let hotlineAction = UIAlertAction(title: "Call Hotline (Anonymous)", style: .default) { action in
+            let phoneNumber4 = "18006624357" //National Opioid Hotline
             let number = phoneNumber4.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
             UIApplication.shared.open(URL(string: "tel://" + number)!, options: [:], completionHandler: nil)
         }
