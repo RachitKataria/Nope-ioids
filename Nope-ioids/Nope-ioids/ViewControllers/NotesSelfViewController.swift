@@ -9,9 +9,10 @@
 import UIKit
 import AVFoundation
 
-class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioRecorderDelegate {
+class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AVAudioRecorderDelegate {
 
-    var numberOfAudio = 2
+    var numberOfAudio = 0
+    var selectedAudio = ""
     let defaults = UserDefaults.standard
     var data : [String] = []
     @IBOutlet weak var recordButton: UIButton!
@@ -30,7 +31,10 @@ class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioR
     override func viewDidLoad() {
         super.viewDidLoad()
         data = defaults.object(forKey:"AudioArray") as? [String] ?? [String]()
+        numberOfAudio = defaults.integer(forKey: "audioNumber")
         NotesList.dataSource = self
+        NotesList.delegate = self
+
         recordingSession = AVAudioSession.sharedInstance()
         do {
             try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
@@ -83,7 +87,6 @@ class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioR
     
     func startRecording() {
         let audioFilename = getDocumentsDirectory().appendingPathComponent("Audio"+String(numberOfAudio)+".m4a")
-        numberOfAudio = numberOfAudio + 1
         
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -114,8 +117,10 @@ class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioR
         audioRecorder = nil
         
         if success {
-            data.append("Audio"+String(numberOfAudio-1)+".m4a")
+            data.append("Audio"+String(numberOfAudio)+".m4a")
             defaults.set(data, forKey: "AudioArray")
+            numberOfAudio = numberOfAudio + 1
+            defaults.set(numberOfAudio, forKey: "audioNumber")
             NotesList.reloadData()
             recordButton.setTitle("Tap to Re-record", for: .normal)
         } else {
@@ -129,6 +134,12 @@ class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioR
             finishRecording(success: false)
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You selected row \(indexPath.row)")
+        selectedAudio = data[indexPath.row]
+    }
+
     func playAudio()
     {
         _ = [
@@ -139,7 +150,7 @@ class NotesSelfViewController: UIViewController, UITableViewDataSource, AVAudioR
             ] as [String : Any]
         
         do {
-            let audioFilename = getDocumentsDirectory().appendingPathComponent("Audio"+String(numberOfAudio-1)+".m4a")
+            let audioFilename = getDocumentsDirectory().appendingPathComponent(selectedAudio)
             let pathString = audioFilename.path
             let audioURL = NSURL(fileURLWithPath: pathString)
             do {
