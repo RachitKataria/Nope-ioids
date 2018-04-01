@@ -65,14 +65,16 @@ class HelpViewController: UIViewController {
         self.show(vc, sender: self)
     }
     @IBAction func selfInspirationPressed(_ sender: Any) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "PersonalInspirationStoryboard", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PersonalInspirationViewController") as! PersonalInspirationViewController
+        let storyboard: UIStoryboard = UIStoryboard(name: "NotesToSelfStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "NotesSelfViewController") as! NotesSelfViewController
         self.show(vc, sender: self)
     }
+    
     @IBAction func nevermindPressed(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "HomeScreenStoryboard", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as! HomeScreenViewController
         self.show(vc, sender: self)
     }
+    
 }
 

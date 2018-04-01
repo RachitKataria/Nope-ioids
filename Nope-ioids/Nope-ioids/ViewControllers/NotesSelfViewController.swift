@@ -17,6 +17,7 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
     var data : [String] = []
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var NotesList: UITableView!
+    @IBOutlet weak var playButton: UIButton!
     
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
@@ -34,6 +35,7 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
         numberOfAudio = defaults.integer(forKey: "audioNumber")
         NotesList.dataSource = self
         NotesList.delegate = self
+        playButton.isHidden = true
 
         recordingSession = AVAudioSession.sharedInstance()
         do {
@@ -137,6 +139,7 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You selected row \(indexPath.row)")
+        playButton.isHidden = false
         selectedAudio = data[indexPath.row]
     }
 

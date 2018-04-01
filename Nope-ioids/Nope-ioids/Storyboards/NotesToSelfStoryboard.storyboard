@@ -83,6 +83,7 @@
                     </view>
                     <connections>
                         <outlet property="NotesList" destination="Qt5-KK-PVs" id="glV-aZ-Tdr"/>
+                        <outlet property="playButton" destination="2ba-PD-LNy" id="ALy-TB-ddt"/>
                         <outlet property="recordButton" destination="L70-yC-yuu" id="tai-BT-rGL"/>
                     </connections>
                 </viewController>
