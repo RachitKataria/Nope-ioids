@@ -14,8 +14,8 @@ class HelpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func backButtonPressed(_ sender: Any) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! ProgressViewController
+        let storyboard: UIStoryboard = UIStoryboard(name: "HomeScreenStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as! HomeScreenViewController
         self.show(vc, sender: self)
     }
     
