@@ -7,4 +7,5 @@ target 'Nope-ioids' do
 
   # Pods for Nope-ioids
   pod 'FSCalendar'
+  pod "SwiftChart"
 end

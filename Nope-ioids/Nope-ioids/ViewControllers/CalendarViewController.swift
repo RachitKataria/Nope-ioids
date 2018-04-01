@@ -8,22 +8,54 @@
 
 import UIKit
 import FSCalendar
+import SwiftChart
 
 class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate, FSCalendarDelegateAppearance {
     
     @IBOutlet weak var calendar: FSCalendar!
+    @IBOutlet weak var streakChart: Chart!
     
     var streakDates: [Date]!
+    var chartData: [(Int, Double)]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(calendar.currentPage)
+        calendar.allowsSelection = false
         
-        // Init
+        // Setup chart
+        setupChart()
+        
+        // Create previous streak
+        setupCalendar()
+   
+    }
+    
+    func setupCalendar() {
         streakDates = []
-        streakDates.append(Calendar.current.date(byAdding: .day, value: -1, to: Date())!)
         
-        // Do any additional setup after loading the view.
+        var dateComponents = DateComponents()
+        dateComponents.year = 2017
+        let userCalendar = Calendar.current // user calendar
+        var randomStreak: Int!
+
+        for monthIndex in 0...chartData.count - 1 {
+            dateComponents.month = 8 + monthIndex
+            
+            if(dateComponents.month! > 12) {
+                dateComponents.month! -= 12
+                dateComponents.year = 2018
+            }
+            
+            dateComponents.day = 1
+            let firstTime = userCalendar.date(from: dateComponents)
+            
+            for _ in 0...Int(chartData[monthIndex].1) {
+                randomStreak = Int(arc4random_uniform(27))
+                let time = Calendar.current.date(byAdding: .day, value: randomStreak, to: firstTime!)!
+                streakDates.append(time)
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,6 +91,22 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         let secondYear = calendar.component(.year, from: secondDate)
         
         return firstMonth == secondMonth && firstDay == secondDay && firstYear == secondYear;
+    }
+    
+    func setupChart() {
+        chartData = [
+            (x: 1, y: 5.0),
+            (x: 2, y: 6.0),
+            (x: 3, y: 4.0),
+            (x: 4, y: 8.0),
+            (x: 5, y: 10.0),
+            (x: 6, y: 4.0),
+            (x: 7, y: 14.0),
+            (x: 8, y: 22.0),
+        ]
+        
+        let series = ChartSeries.init(data: chartData)
+        streakChart.add(series)
     }
 }
 
