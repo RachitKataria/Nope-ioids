@@ -5,8 +5,21 @@ class BreatheViewController: UIViewController {
     @IBOutlet weak var NextButton: UIButton!
     @IBOutlet weak var BreatheImageView: UIImageView!
     @IBOutlet weak var BreatheLabel: UILabel!
+    @IBOutlet weak var BackButton: UIButton!
+    @IBOutlet weak var HeyLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        BreatheLabel.isOpaque = false
+        BreatheLabel.alpha = 0.0
+        NextButton.titleLabel?.isOpaque = false
+        NextButton.titleLabel?.alpha = 0.0
+        HeyLabel.isOpaque = false
+        HeyLabel.alpha = 0.0
+        BackButton.isOpaque = false
+        BackButton.alpha = 0.0
+        
+        
         let breatheGif = UIImage.gifImageWithName("breathe")
         BreatheImageView.image = breatheGif
         
@@ -14,12 +27,24 @@ class BreatheViewController: UIViewController {
             self.BreatheLabel.text = "Breathe out..."
         }
         
-        NextButton.isHidden = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1){
+             UIView.animate(withDuration: 1.5, animations: {
+             self.BreatheLabel.alpha = 1.0
+             self.NextButton.alpha = 1.0
+             self.HeyLabel.alpha = 1.0
+             self.BackButton.alpha = 1.0
+             }, completion: nil)
+        }
+        
+        NextButton.isUserInteractionEnabled = false
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 6) { // change 2 to desired number of seconds
             // Your code with delay
-            self.BreatheLabel.isHidden = true
-            self.NextButton.isHidden = false
+            UIView.animate(withDuration: 0.5, animations:{
+                self.BreatheLabel.alpha = 0.0
+                self.NextButton.titleLabel?.alpha = 1.0
+                self.NextButton.isUserInteractionEnabled = true
+            })
         }
     }
     
