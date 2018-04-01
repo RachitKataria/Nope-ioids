@@ -27,8 +27,8 @@ class NotesSelfViewController: UIViewController, UITableViewDelegate, UITableVie
 
     @IBAction func backButtonPressed(_ sender: Any) {
         audioPlayer?.stop()
-        let storyboard: UIStoryboard = UIStoryboard(name: "ProgressStoryboard", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ProgressViewController") as! ProgressViewController
+        let storyboard: UIStoryboard = UIStoryboard(name: "HelpStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
         self.show(vc, sender: self)
     }
     
